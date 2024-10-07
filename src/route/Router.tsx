@@ -5,7 +5,7 @@ function Router() {
     return (
         <BrowserRouter>
             <Routes>
-                <Route path="/" element={<Main />} />
+                <Route path="/note-pad" element={<Main />} />
             </Routes>
         </BrowserRouter>
     );
