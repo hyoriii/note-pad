@@ -1,5 +1,7 @@
 import React from "react";
 import { IoIosSearch, IoIosAdd } from "react-icons/io";
+import { IoTrashOutline } from "react-icons/io5";
+import { CiEdit } from "react-icons/ci";
 import Button from '@mui/material/Button';
 
 const Main = () => {
@@ -7,6 +9,21 @@ const Main = () => {
 
     const handleMenuClick = (menu: string) => {
         setActiveMenu(menu);
+    };
+
+    const getNoteColorClass = (title: string) => {
+        switch (title) {
+            case "About":
+                return "about-color";
+            case "Services":
+                return "services-color";
+            case "Contact":
+                return "contact-color";
+            case "All":
+                return "all-color";
+            default:
+                return "";
+        }
     };
 
     return (
@@ -43,7 +60,87 @@ const Main = () => {
                             </nav>
                         </div>
                     </div>
-                    <div className="notepad_main_area"></div>
+                    <div className="notepad_main_area">
+                        <div className="note">
+                            <div className="note_head">
+                                <div className={`note_menu_text ${getNoteColorClass("About")}`}>About</div>
+                                <div className="note_icon">
+                                    <CiEdit />
+                                    <IoTrashOutline />
+                                </div>
+                            </div>
+                            <div className="note_content">
+                                <div className="note_title_text">title text area</div>
+                                <div className="note_content_text">content text area</div>
+                            </div>
+                        </div>
+
+                        <div className="note">
+                            <div className="note_head">
+                                <div className="note_menu_text">About</div>
+                                <div className="note_icon">
+                                    <CiEdit />
+                                    <IoTrashOutline />
+                                </div>
+                            </div>
+                            <div className="note_content">
+                                <div className="note_title_text">title text area</div>
+                                <div className="note_content_text">content text area</div>
+                            </div>
+                        </div>
+                        <div className="note">
+                            <div className="note_head">
+                                <div className="note_menu_text">About</div>
+                                <div className="note_icon">
+                                    <CiEdit />
+                                    <IoTrashOutline />
+                                </div>
+                            </div>
+                            <div className="note_content">
+                                <div className="note_title_text">title text area</div>
+                                <div className="note_content_text">content text area</div>
+                            </div>
+                        </div>
+                        <div className="note">
+                            <div className="note_head">
+                                <div className="note_menu_text">About</div>
+                                <div className="note_icon">
+                                    <CiEdit />
+                                    <IoTrashOutline />
+                                </div>
+                            </div>
+                            <div className="note_content">
+                                <div className="note_title_text">title text area</div>
+                                <div className="note_content_text">content text area</div>
+                            </div>
+                        </div>
+                        <div className="note">
+                            <div className="note_head">
+                                <div className="note_menu_text">About</div>
+                                <div className="note_icon">
+                                    <CiEdit />
+                                    <IoTrashOutline />
+                                </div>
+                            </div>
+                            <div className="note_content">
+                                <div className="note_title_text">title text area</div>
+                                <div className="note_content_text">content text area</div>
+                            </div>
+                        </div>
+                        <div className="note">
+                            <div className="note_head">
+                                <div className="note_menu_text">About</div>
+                                <div className="note_icon">
+                                    <CiEdit />
+                                    <IoTrashOutline />
+                                </div>
+                            </div>
+                            <div className="note_content">
+                                <div className="note_title_text">title text area</div>
+                                <div className="note_content_text">content text area</div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </>

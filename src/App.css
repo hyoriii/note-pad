@@ -130,7 +130,7 @@ ul li {
   width: 100%;
 }
 .main .notepad_area .notepad_top_area .notepad_nav_area nav ul li {
-  width: 12%;
+  width: 10%;
   height: 45px;
   display: inline-block;
   list-style: none;
@@ -164,6 +164,73 @@ ul li {
 }
 .main .notepad_area .notepad_top_area .notepad_nav_area nav ul .active:hover::after {
   width: 0;
+}
+.main .notepad_area .notepad_main_area {
+  margin-top: 30px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+}
+.main .notepad_area .notepad_main_area .note {
+  width: 23%;
+  margin: 14px 1%;
+  height: 300px;
+  border-radius: 10px;
+  display: flex;
+  flex-flow: column nowrap;
+  background-color: #FFB6C1;
+  transition: all 0.3s ease;
+  position: relative;
+  z-index: 1;
+}
+.main .notepad_area .notepad_main_area .note:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+  opacity: 90%;
+}
+.main .notepad_area .notepad_main_area .note:hover .note_menu_text {
+  box-shadow: -0.1rem -0.2rem 1rem rgba(252, 122, 170, 0.3) inset, -0.1rem -0.2rem 2.5rem rgba(252, 122, 170, 0.2) inset, 0 0.2rem 0.4rem rgba(251, 77, 141, 0.3);
+}
+.main .notepad_area .notepad_main_area .note:hover .note_icon svg {
+  color: #FFC1E3;
+}
+.main .notepad_area .notepad_main_area .note .note_head {
+  margin-top: 10px;
+  padding: 0 10px;
+  height: 40px;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
+.main .notepad_area .notepad_main_area .note .note_head .note_menu_text {
+  background-color: white;
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 14px;
+  box-shadow: -0.1rem -0.2rem 1rem rgba(252, 122, 170, 0.2) inset, -0.1rem -0.2rem 2.5rem rgba(252, 122, 170, 0.1) inset, 0 0.2rem 0.4rem rgba(251, 77, 141, 0.2);
+}
+.main .notepad_area .notepad_main_area .note .note_head .note_icon {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+}
+.main .notepad_area .notepad_main_area .note .note_head .note_icon svg {
+  font-size: 20px;
+  margin: 10px;
+  color: white;
+}
+.main .notepad_area .notepad_main_area .note .note_content {
+  padding: 0 10px;
+}
+.main .notepad_area .notepad_main_area .note .note_content .note_title_text {
+  font-size: 20px;
+  margin-bottom: 5px;
+  color: white;
+}
+.main .notepad_area .notepad_main_area .note .note_content .note_content_text {
+  font-size: 15px;
+  color: white;
 }
 
 /*# sourceMappingURL=App.css.map */

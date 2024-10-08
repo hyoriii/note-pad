@@ -126,7 +126,7 @@ ul {
           width: 100%;
           ul {
             li{
-              width: 12%;
+              width: 10%;
               height: 45px;
               display: inline-block;
               list-style: none;
@@ -161,6 +161,75 @@ ul {
                 width: 0;
               }
             }
+          }
+        }
+      }
+    }
+    .notepad_main_area {
+      margin-top: 30px;
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: flex-start;
+      .note {
+        width: 23%;
+        margin: 14px 1%;
+        height: 300px;
+        border-radius: 10px;
+        display: flex;
+        flex-flow: column nowrap;
+        background-color: #FFB6C1;
+        transition: all 0.3s ease;
+        position: relative;
+        z-index: 1;
+        &:hover {
+          transform: scale(1.05);
+          box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+          opacity: 90%;
+          .note_menu_text {
+            box-shadow: -0.1rem -0.2rem 1rem rgba(252, 122, 170, 0.3) inset,
+            -0.1rem -0.2rem 2.5rem rgba(252, 122, 170, 0.2) inset,
+            0 0.2rem 0.4rem rgba(251, 77, 141, 0.3);
+          }
+          .note_icon svg {
+            color: #FFC1E3;
+          }
+        }
+        .note_head {
+          margin-top: 10px;
+          padding: 0 10px;
+          height: 40px;
+          display: flex;
+          flex-flow: row nowrap;
+          justify-content: space-between;
+          align-items: center;
+          .note_menu_text {
+            background-color: white;
+            padding: 5px 10px;
+            border-radius: 20px;
+            font-size: 14px;
+            box-shadow: -0.1rem -0.2rem 1rem rgba(252, 122, 170, 0.2) inset, -0.1rem -0.2rem 2.5rem rgba(252, 122, 170, 0.1) inset, 0 0.2rem 0.4rem rgba(251, 77, 141, 0.2);
+          }
+          .note_icon {
+            display: flex;
+            flex-flow: row nowrap;
+            align-items: center;
+            svg {
+              font-size: 20px;
+              margin: 10px;
+              color: white;
+            }
+          }
+        }
+        .note_content {
+          padding: 0 10px;
+          .note_title_text {
+            font-size: 20px;
+            margin-bottom: 5px;
+            color: white;
+          }
+          .note_content_text {
+            font-size: 15px;
+            color: white;
           }
         }
       }
