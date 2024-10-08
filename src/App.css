@@ -9,6 +9,14 @@ body {
   font-family: "NanumSquareRound";
 }
 
+ul {
+  padding: 0;
+  margin: 0;
+}
+ul li {
+  list-style-type: none;
+}
+
 .top_nav {
   height: 8vh;
   width: 100%;
@@ -47,8 +55,8 @@ body {
 .top_nav button {
   margin-left: 20px;
   background-color: #1E90FF;
-  padding: 10.25px 16px 10.25px 10px;
-  border-radius: 20px;
+  padding: 6.75px 16px 6.75px 10px;
+  border-radius: 25px;
   text-transform: none;
   font-size: 18px;
 }
@@ -108,6 +116,54 @@ body {
 .main .notepad_area {
   width: 80%;
   height: 100%;
+}
+.main .notepad_area .notepad_top_area .notepad_top_title {
+  font-size: 23px;
+}
+.main .notepad_area .notepad_top_area .notepad_nav_area {
+  display: flex;
+  align-items: center;
+}
+.main .notepad_area .notepad_top_area .notepad_nav_area nav {
+  background: #fff;
+  border-radius: 9px;
+  width: 100%;
+}
+.main .notepad_area .notepad_top_area .notepad_nav_area nav ul li {
+  width: 12%;
+  height: 45px;
+  display: inline-block;
+  list-style: none;
+  font-size: 18px;
+  margin: 0 20px;
+  cursor: pointer;
+  position: relative;
+  text-align: center;
+  line-height: 45px;
+}
+.main .notepad_area .notepad_top_area .notepad_nav_area nav ul li:after {
+  content: "";
+  width: 0;
+  height: 3px;
+  background: #FFB6C1;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  transition: 0.5s;
+}
+.main .notepad_area .notepad_top_area .notepad_nav_area nav ul li:hover::after {
+  width: 100%;
+}
+.main .notepad_area .notepad_top_area .notepad_nav_area nav ul li:first-child {
+  margin-left: 0;
+}
+.main .notepad_area .notepad_top_area .notepad_nav_area nav ul .active {
+  background-color: #FFB6C1;
+  color: white;
+  border-radius: 30px;
+}
+.main .notepad_area .notepad_top_area .notepad_nav_area nav ul .active:hover::after {
+  width: 0;
 }
 
 /*# sourceMappingURL=App.css.map */
